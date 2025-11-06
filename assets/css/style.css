@@ -1,0 +1,248 @@
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        "header"
+        "aside"
+        "main"
+        "section"
+        "footer";
+    grid-template-rows: 8% 8% 1fr 5% 10%;
+    min-height: 100vh;
+    width: 100%;
+}
+
+/*-------------------------header------------------------------*/
+
+.header {
+    align-items: center;
+    background-color: #1A202C;
+    display: flex;
+    grid-area: header;
+    justify-content: space-between;
+    padding: 0 1rem 0 1rem;
+}
+
+.titulo {
+    color: white;
+    transition: color .5s linear .5s;
+}
+
+.titulo:hover {
+    color: #D4AF37;
+}
+
+.titulo h1 {
+    align-items: center;
+    display: flex;
+    height: 100%;
+}
+
+.logo {
+    align-items: center;
+    height: auto;
+    display: flex;
+    justify-content: end;
+    width: 30%;
+}
+
+.logo img {
+    border-radius: 50%;
+    height: 10vw;
+    -webkit-mask-image:
+        radial-gradient(circle, black 60%, transparent 100%);
+    mask-image: -moz-radial-gradient(circle, black 50%, transparent 100%);
+    width: 10vw;
+}
+
+/*--------------------------------aside-------------------------------*/
+
+.aside {
+    align-items: center;
+    background-color: #F7EDE2;
+    display: flex;
+    grid-area: aside;
+    height: 100%;
+    justify-content: center;
+}
+
+.dropdown {
+    width: 60%;
+}
+
+.dropdown button {
+    color: #1A202C;
+    width: 100%;
+}
+
+.dropdown-menu {
+    color: #1A202C;
+    width: 100%;
+}
+
+.lista a {
+    font-weight: normal;
+    transition-property: font-weight;
+    transition-duration: 2s;
+    transition-timing-function: ease-out;
+}
+
+.lista:hover a {
+    font-weight: 900;
+}
+
+.dropdown,
+.lista {
+    display: none;
+}
+
+/*------------------------------------main--------------------------------*/
+
+.main {
+    display: flex;
+    gap: 0.5rem;
+    grid-area: main;
+    justify-content: center;
+    width: 100%;
+}
+
+.card {
+    border: 1px solid #D4AF37;
+    border-radius: 0px;
+    color: #1A202C;
+    height: auto;
+    width: 100%;
+}
+
+.card img {
+    min-height: 70%;
+    object-fit: fill;
+    transition: linear 2s;
+    width: 100%;
+}
+
+.card img:hover {
+    transform: rotate(.1deg) scale(1.15);
+}
+
+.card-body {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 30%;
+    width: 100%;
+}
+
+.card-body button {
+    color: #D4AF37;
+    margin-bottom: 0.5rem;
+}
+
+/*----------------------------------section --------------------------------*/
+
+.section {
+    align-items: center;
+    background-color: #CBD5E0;
+    color: #1A202C;
+    display: flex;
+    grid-area: section;
+    justify-content: center;
+}
+
+.filtros {
+    height: 50%;
+    font-weight: bold;
+    width: 30%;
+}
+
+.mapa {
+    font-weight: bold;
+    height: 50%;
+    text-align: end;
+    width: 30%;
+
+}
+
+.filtros a,
+.mapa a {
+    color: #1A202C;
+    margin: auto;
+    text-decoration: none;
+}
+
+.filtros i,
+.mapa i {
+    height: 100%;
+    margin: auto;
+    padding: 0.2rem;
+}
+
+/*-----------------------------------footer-----------------------------*/
+
+.footer {
+    color: #CBD5E0;
+    background-color: #1A202C;
+    grid-area: footer;
+}
+
+.zocalo {
+    display: flex;
+    height: 40%;
+    justify-content: center;
+    margin: auto;
+}
+
+.zocalo p {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    font-weight: bold;
+}
+
+.links {
+    display: flex;
+    height: 60%;
+    justify-content: space-around;
+}
+
+.contactos {
+    animation-name: animacion;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-duration: 1s;
+    animation-direction: alternate;
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 0.5rem;
+}
+
+@keyframes animacion {
+    from {
+        transform: translateX(-10px);
+    }
+
+    to {
+        transform: translateX(10px);
+    }
+}
+
+.contactos i {
+    display: flex;
+    justify-content: center;
+    font-size: larger;
+    width: 100%;
+}
+
+.contactos a {
+    color: #CBD5E0;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    text-decoration: none;
+}
